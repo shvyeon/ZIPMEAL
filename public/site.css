@@ -1,0 +1,263 @@
+/*font*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Koh+Santepheap&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+
+body {
+  background-color: white;
+  padding-top: 80px;
+}
+
+h4 {
+  text-align: center;
+  color: #5a8157;
+  font-family: "Koh Santepheap", cursive;
+}
+
+/* NavigationBar */
+.NavigationBar {
+  background-color: white;
+  width: 100%;
+  border: 1px solid darkgreen;
+}
+
+#logo {
+  text-align: center;
+}
+
+.navi-left a:link {
+  font-family: "Roboto Slab", serif;
+  text-align: center;
+  color: #5a8157;
+  text-decoration: none;
+}
+
+.navi-left a:hover,
+a:active {
+  text-decoration: underline;
+}
+
+.navi-left a:visited {
+  color: #5a8157;
+}
+
+.navi-right a:link {
+  font-family: "Roboto Slab", serif;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  background-color: #5a8157;
+  border-radius: 5px;
+}
+
+.navi-right a:visited {
+  color: white;
+}
+
+.navi-right a:hover,
+a:active {
+  background-color: #ff665a;
+}
+
+/*Hero*/
+.hero {
+  height: 400px;
+  background-image: url("/images/ontario-food.jpg");
+  font-family: "Permanent Marker", cursive;
+  color: white;
+  text-align: center;
+}
+
+/*content section*/
+.card {
+  border: none;
+}
+
+.How-it-works {
+  width: 90%;
+  margin: auto;
+  font-family: "Roboto Slab", serif;
+}
+
+.card-img-top {
+  height: 15rem;
+}
+
+.content-box {
+  color: #898a8d;
+}
+
+.how-content p {
+  text-align: center;
+  color: #898a8d;
+}
+
+/*Top Meals section*/
+#TopMeals {
+  width: 85%;
+  max-width: 1100 px;
+  margin: auto;
+  text-align: center;
+}
+
+.mealbox {
+  box-shadow: 5px 5px 5px grey;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: #e8eae7;
+  color: #5e5c4f;
+}
+
+.mealbox:hover {
+  background-color: #e0e2b0;
+  color: #5e5c4f;
+}
+
+.mealbox p {
+  font-family: "Roboto Slab", serif;
+  font-size: small;
+}
+
+.mealbox h5 {
+  font-family: "Roboto Slab", serif;
+  color: #5a8157;
+}
+
+/* footer section */
+.footer {
+  background-color: #dacd75;
+  font-family: "Roboto Slab", serif;
+  position: absolute;
+}
+
+.footerLogo {
+  text-align: center;
+}
+
+.footer h3 {
+  font-family: "Roboto Slab", serif;
+}
+
+.footerContact {
+  text-align: center;
+}
+
+.footerContact a:hover,
+a:active {
+  text-decoration: underline;
+}
+
+.copyright {
+  color: #5e5c4f;
+}
+
+.footerNavi {
+  text-align: center;
+}
+
+.footerNavi a {
+  color: #5e5c4f;
+  text-decoration: none;
+}
+
+.footerNavi a:hover,
+a:active {
+  text-decoration: underline;
+}
+
+/*sign-up*/
+.sign-up {
+  text-align: center;
+  font-family: "Koh Santepheap", cursive;
+  color: #2b362a;
+}
+
+.sign-up h6 {
+  color: #5e5c4f;
+  font-family: "Roboto Slab", serif;
+}
+
+.sign-up button {
+  color: #5e5c4f;
+  border: 2px solid #2b362a;
+  width: 200px;
+  height: 30px;
+  background-color: white;
+}
+
+.sign-up button:hover {
+  background-color: #ff665a;
+  border: 2px solid #ff665a;
+  color: white;
+}
+
+.have-account a:link {
+  font-family: "Roboto Slab", serif;
+  color: #ff665a;
+  text-decoration: none;
+}
+
+.have-account a:hover,
+a:active {
+  text-decoration: underline;
+}
+
+.have-account a:visited {
+  color: #ff665a;
+}
+
+/*on-the-menu*/
+#onTheMenu {
+  width: 60%;
+  margin: auto;
+}
+
+#onTheMenu h4 {
+  margin-top: 20px;
+}
+
+#onTheMenu p {
+  font-family: "Roboto Slab", serif;
+  text-align: center;
+  color: #5e5c4f;
+}
+
+#onTheMenu h5 {
+  font-family: "Roboto Slab", serif;
+  text-align: center;
+  color: #5a8157;
+}
+
+/*log-in*/
+.logIn {
+  text-align: center;
+  font-family: "Koh Santepheap", cursive;
+  color: #2b362a;
+  height: 390px;
+}
+
+.logIn h5 {
+  color: #5e5c4f;
+  font-family: "Roboto Slab", serif;
+}
+
+.logIn button {
+  color: #5e5c4f;
+  border: 2px solid #2b362a;
+  width: 200px;
+  height: 30px;
+  background-color: white;
+}
+
+.logIn button:hover {
+  background-color: #ff665a;
+  border: 2px solid #ff665a;
+  color: white;
+}
+
+.logIn a:link {
+  font-family: "Roboto Slab", serif;
+  color: #ff665a;
+  text-decoration: none;
+  margin-right: 10px;
+}
