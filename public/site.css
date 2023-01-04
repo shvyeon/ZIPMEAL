@@ -261,3 +261,38 @@ a:active {
   text-decoration: none;
   margin-right: 10px;
 }
+
+/*welcome*/
+.welcome {
+  height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome h5 {
+  font-family: "Permanent Marker", cursive;
+  color: #1c5253;
+  margin-bottom: 3%;
+  margin-top: 3%;
+}
+
+.welcome button {
+  font-family: "Roboto Slab", serif;
+  color: #5e5c4f;
+  border: 2px solid #2b362a;
+  width: 200px;
+  height: 30px;
+  background-color: white;
+}
+
+.welcome button:hover {
+  background-color: #ff665a;
+  border: 2px solid #ff665a;
+  color: white;
+}
+
+.welcomeIMG {
+  margin-bottom: 3%;
+}

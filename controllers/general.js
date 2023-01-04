@@ -112,6 +112,45 @@ router.post("/sign-up", function (req, res) {
     validation.password =
       "Password must contains at least one lowercase letter, uppercase letter, number and symbol.";
   }
+
+  if (passed) {
+    const sgMail = require("@sendgrid/mail");
+    sgMail.setApiKey(process.env.SEND_GRID_API_KEY);
+
+    const msg = {
+      to: email,
+      from: "shvyeon@naver.com",
+      subject: "Welcome!",
+      html: `Hello ${firstName} ${lastName}, This is ZIPMEAL<br>
+            We will do our best to provide fresh meal kits using local food. <br>
+            Thank you for subscribing to us. <br>
+            <i>FRESHNESS TO YOUR DOORSTEP<i><br>
+            ZIPMEAL<br>
+            Seonhye Hyeon`,
+    };
+
+    // Validation passed, sent out an email.
+    sgMail
+      .send(msg)
+      .then(() => {
+        res.render("general/welcome", {
+          values: req.body,
+          validation,
+        });
+      })
+      .catch((err) => {
+        console.log(`Error ${err}`);
+        res.render("general/sign-up", {
+          values: req.body,
+          validation,
+        });
+      });
+  } else {
+    res.render("general/sign-up", {
+      values: req.body,
+      validation,
+    });
+  }
 });
 
 module.exports = router;
