@@ -1,16 +1,45 @@
 <div class="container mt-5 logIn">
-      <img src="/images/logo.jpg" alt="zipmeal-logo" width="200" style="margin-bottom: 20px;"/></a>
+  <img
+    src="/images/logo.jpg"
+    alt="zipmeal-logo"
+    width="200"
+    style="margin-bottom: 20px;"
+  />
   <h5 style="margin-bottom: 20px;">Welcome Back</h5>
   <div class="row info">
-    <p>
-      <input type="text" placeholder="Email Address" />
-    </p>
-    <p>
-      <input type="text" placeholder="Password" />
-    </p>
+    <form method="post" action="/log-in">
+      <p>
+        <input
+          type="text"
+          id="email"
+          name="email"
+          value="{{values.email}}"
+          placeholder="Email Address"
+        />
+      </p>
+      {{#if validation.email}}
+        <span
+          style="color: #ff665a; font-size: small;"
+        >{{validation.email}}</span><br />
+      {{/if}}
+      <p>
+        <input
+          type="text"
+          id="password"
+          name="password"
+          value="{{values.password}}"
+          placeholder="Password"
+        />
+      </p>
+      {{#if validation.password}}
+        <span
+          style="color: #ff665a; font-size: small;"
+        >{{validation.password}}</span><br />
+      {{/if}}
+      <input type="submit" class="logInButton" value="LOG IN" />
+    </form>
   </div>
   <div>
-    <button>LOG IN</button>
     <p class="have-account mb-4 mt-2">Don't have an account?
       <a href="/sign-up">SIGN UP</a>
     </p>

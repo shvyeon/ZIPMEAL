@@ -1,28 +1,78 @@
 <div class="container mt-4 sign-up">
-  <h2>SIGN UP</h2>
+  <img
+    src="/images/logo.jpg"
+    alt="zipmeal-logo"
+    width="200"
+    style="margin-bottom: 20px;"
+  />
+  <h5>SIGN UP</h5>
   <h6>Sign up and enjoy our fresh meal-kits</h6>
   <div class="row info">
-    <p>
-      <input type="text" placeholder="Name" />
-    </p>
-    <p>
-      <input type="text" placeholder="Email Address" />
-    </p>
-    <p>
-      <input type="text" placeholder="Address" />
-    </p>
-    <p>
-      <input type="text" placeholder="City" />
-    </p>
-    <p>
-      <input type="text" placeholder="Postal Code" />
-    </p>
-    <p>
-      <input type="tel" placeholder="Phone number" />
-    </p>
+    <form method="post" action="/sign-up">
+      <!--first name-->
+      <p>
+        <input
+          type="text"
+          id="firstName"
+          name="firstName"
+          value="{{values.firstName}}"
+          placeholder="First Name"
+        />
+      </p>
+      {{#if validation.firstName}}
+        <span
+          style="color: #ff665a; font-size: small;"
+        >{{validation.firstName}}</span><br />
+      {{/if}}
+      <!--last name-->
+      <p>
+        <input
+          type="text"
+          id="lastName"
+          name="lastName"
+          value="{{values.lastName}}"
+          placeholder="Last Name"
+        />
+      </p>
+      {{#if validation.lastName}}
+        <span
+          style="color: #ff665a; font-size: small;"
+        >{{validation.lastName}}</span><br />
+      {{/if}}
+      <!-- email -->
+      <p>
+        <input
+          type="text"
+          id="email"
+          name="email"
+          value="{{values.email}}"
+          placeholder="Email"
+        />
+      </p>
+      {{#if validation.email}}
+        <span
+          style="color: #ff665a; font-size: small;"
+        >{{validation.email}}</span><br />
+      {{/if}}
+      <!-- password -->
+      <p>
+        <input
+          type="text"
+          id="password"
+          name="password"
+          value="{{values.password}}"
+          placeholder="Password"
+        />
+      </p>
+      {{#if validation.password}}
+        <span
+          style="color: #ff665a; font-size: small;"
+        >{{validation.password}}</span><br />
+      {{/if}}
+      <input type="submit" value="SIGN UP" class="signUpButton" />
+    </form>
   </div>
   <div>
-    <button>SIGN UP</button>
     <p class="have-account mb-4 mt-2">Have an account?
       <a href="/log-in">LOG IN</a></p>
   </div>

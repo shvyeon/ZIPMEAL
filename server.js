@@ -1,5 +1,6 @@
 var express = require("express");
 const exphbs = require("express-handlebars");
+const bodyParser = require("body-parser");
 
 var app = express();
 
@@ -12,6 +13,9 @@ app.engine(
 );
 
 app.set("view engine", ".hbs");
+
+//set up body parser
+app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(express.static(__dirname + "/public"));
 
